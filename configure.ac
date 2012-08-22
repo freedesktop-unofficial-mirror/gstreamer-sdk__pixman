@@ -933,6 +933,7 @@ if test $ac_cv_tls = none ; then
     PIXMAN_CHECK_PTHREAD([CFLAGS="-D_REENTRANT"; LIBS="-lpthread"])
     PIXMAN_CHECK_PTHREAD([CFLAGS="-pthread"; LDFLAGS="-pthread"])
     PIXMAN_CHECK_PTHREAD([CFLAGS="-D_REENTRANT"; LDFLAGS="-lroot"])
+    PIXMAN_CHECK_PTHREAD([CFLAGS=""; LDFLAGS="-lc"])
     
     if test $support_for_pthread_setspecific = yes; then
 	CFLAGS="$CFLAGS $PTHREAD_CFLAGS"
