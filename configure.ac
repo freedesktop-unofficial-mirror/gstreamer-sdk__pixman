@@ -467,7 +467,12 @@ case $host_os in
 	 SSE2_LDFLAGS="$HWCAP_LDFLAGS"
       fi
       ;;
+   linux-android*)
+      is_android="yes"
+      ;;
 esac
+
+AM_CONDITIONAL(IS_ANDROID, test $is_android = yes)
 
 AC_SUBST(LS_CFLAGS)
 AC_SUBST(IWMMXT_CFLAGS)

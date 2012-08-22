@@ -111,6 +111,11 @@ libpixman-iwmmxt.la: libpixman_iwmmxt_la-pixman-mmx.lo $(libpixman_iwmmxt_la_DEP
 	$(AM_V_CCLD)$(libpixman_iwmmxt_la_LINK) libpixman_iwmmxt_la-pixman-mmx.lo $(libpixman_iwmmxt_la_LIBADD) $(LIBS)
 endif
 
+if IS_ANDROID
+libpixman_1_la_SOURCES += cpu-features.c
+noinst_HEADERS += cpu-features.h
+endif
+
 # mips dspr2 code
 if USE_MIPS_DSPR2
 noinst_LTLIBRARIES += libpixman-mips-dspr2.la
