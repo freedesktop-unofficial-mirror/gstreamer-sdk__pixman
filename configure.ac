@@ -472,7 +472,7 @@ case $host_os in
       ;;
 esac
 
-AM_CONDITIONAL(IS_ANDROID, test $is_android = yes)
+AM_CONDITIONAL(IS_ANDROID, test "x$is_android" = "xyes")
 
 AC_SUBST(LS_CFLAGS)
 AC_SUBST(IWMMXT_CFLAGS)
