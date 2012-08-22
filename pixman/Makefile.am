@@ -113,7 +113,7 @@ endif
 
 if IS_ANDROID
 libpixman_1_la_SOURCES += cpu-features.c
-noinst_HEADERS += cpu-features.h
+noinst_HEADERS = cpu-features.h
 endif
 
 # mips dspr2 code
